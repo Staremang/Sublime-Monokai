@@ -1,0 +1,135 @@
+@background: #272822;
+@green: #a6e22e;
+@red: #f92672;
+@purple: #ae81ff;
+@bright: #f9f9f9;
+@egg: #f4f4f4;
+@blue: #66d9ef;
+@yellow: #e6db74;
+@grey: #75715e;
+@orange: #fd971f;
+@selected: #d3d3d3;
+@dark: #242424;
+@linenumber: #868686;
+
+/* ------- Style ------- */
+.cm- {
+	&bracket {
+		color: @bright;
+	}
+	&keyword, &tag {
+		color: @red;
+	}
+	&atom, &link, &number {
+		color: @purple;
+	}
+	&operator, &variable, &variable-3 {
+		color: @egg;
+	}
+	&attribute, &builtin, &meta, &qualifier {
+		color: @green;
+	}
+	&string, &string-2 {
+		color: @yellow;
+	}
+	&property {
+		color: @blue;
+	}
+	&variable-2 {
+		color: @egg;
+	}
+	&comment {
+		color: @grey;
+	}
+	&def {
+		color: @orange;
+	}
+	&matchhighlight {
+		background: #333;
+	}
+	&error {
+		background: #e32469;
+		color: #eaeaea!important;
+	}
+}
+.CodeMirror, .CodeMirror-scroll {
+	background: @background;
+	color: @bright;
+}
+.CodeMirror {
+	&-gutters {
+		background: @background;
+	}
+	&-linenumber {
+		color: @linenumber;
+	}
+	&-cursor {
+		border-left: 1px solid #fff!important;
+	}
+	&-selected {
+		background: #3C3F41;
+		opacity: .23
+	}
+	&-matchingbracket {
+		background: @selected !important;
+		color: @dark!important;
+		font-weight: 700;
+	}
+	&-nonmatchingbracket {
+		background: @red!important;
+		color: #fff!important;
+	}
+	&-matchingtag {
+		background: rgba(255, 255, 255, .15);
+	}
+	&-searching {
+		background: @orange;
+		border: 1px solid white;
+	}
+	&-foldmarker {
+		display: inline-block;
+		padding: 0 2px;
+		font-size: .75em;
+		color: @dark!important;
+		background: @selected;
+		&:after {
+			content: '\2022\2022\2022';
+			position: relative;
+			top: 1px;
+		}
+	}
+	&-focused {
+		.CodeMirror-selected {
+			background: @selected;
+			color: @dark;
+		}
+		.CodeMirror-activeline .CodeMirror-gutter-elt {
+			color: #F8F8F2;
+		}
+	}
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt,
+.CodeMirror-focused .CodeMirror-activeline-background,
+.inline-widget .CodeMirror-gutter-elt {
+    background: #3e3d32;
+}
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-left: none!important;
+    border-bottom: 1px solid #F8F8F2;
+}
+.searching-current-match {
+    background: @yellow;
+}
+.ico-cssColorPreview {
+    width: 5px;
+    height: 5px;
+    margin-bottom: 2px;
+    margin-left: .5em;
+    border-radius: 50%;
+}
+.brackets-git-gutter- {
+	&added, &modified, &removed {
+		width: 3px;
+	}
+}
