@@ -1,9 +1,9 @@
 {
-    "name": "Sublime-Monokai",
+    "name": "sublime-monokai",
     "title": "Sublime monokai theme",
     "description": "Brackets monokai theme with colors from Sublime Text",
     "homepage": "https://github.com/Staremang/Sublime-Monokai",
-    "version": "1.0",
+    "version": "1.0.0",
     "author": "Staremang <Staremang@ya.ru>",
     "license": "MIT",
     "theme": {  
